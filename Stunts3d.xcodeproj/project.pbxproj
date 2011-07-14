@@ -27,6 +27,7 @@
 		83E8F5C313CAE2B200445933 /* Attribs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83E8F5C213CAE2B200445933 /* Attribs.txt */; };
 		83E8F5C713CAE39700445933 /* grass_256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E8F5C613CAE39700445933 /* grass_256.jpg */; };
 		83E8F5CA13CD9BFD00445933 /* Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E8F5C913CD9BFD00445933 /* Texture.m */; };
+		83F3E53D13CF178400A5892E /* texture_256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83F3E53C13CF178400A5892E /* texture_256.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		83E8F5C613CAE39700445933 /* grass_256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass_256.jpg; sourceTree = "<group>"; };
 		83E8F5C813CD9BFD00445933 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 		83E8F5C913CD9BFD00445933 /* Texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture.m; sourceTree = "<group>"; };
+		83F3E53C13CF178400A5892E /* texture_256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_256.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		83E8F5C513CAE39700445933 /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				83F3E53C13CF178400A5892E /* texture_256.jpg */,
 				83E8F5C613CAE39700445933 /* grass_256.jpg */,
 			);
 			path = Textures;
@@ -228,6 +231,7 @@
 				833BD65E13C995CC00E90CCB /* Terrain2.txt in Resources */,
 				83E8F5C313CAE2B200445933 /* Attribs.txt in Resources */,
 				83E8F5C713CAE39700445933 /* grass_256.jpg in Resources */,
+				83F3E53D13CF178400A5892E /* texture_256.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

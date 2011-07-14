@@ -71,6 +71,24 @@
         glGenFramebuffers(1, &defaultFramebuffer);
         glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
         
+        // Retina support - http://www.david-amador.com/2010/09/setting-opengl-view-for-iphone-4-retina-hi-resolution/
+        int w = 320;
+        int h = 480;
+        float ver = [[[UIDevice currentDevice] systemVersion] floatValue];
+        // You can't detect screen resolutions in pre 3.2 devices, but they are all 320x480
+        if (ver >= 3.2f) {
+            UIScreen* mainscr = [UIScreen mainScreen];
+            w = mainscr.currentMode.size.width;
+            h = mainscr.currentMode.size.height;
+        }
+        if (w == 640 && h == 960) { // Retina display detected
+            // Set contentScale Factor to 2
+            self.contentScaleFactor = 2.0;
+            // Also set our glLayer contentScale Factor to 2
+            CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
+            eaglLayer.contentsScale=2; //new line
+        }
+        
         // Create color render buffer and allocate backing store.
         glGenRenderbuffers(1, &colorRenderbuffer);
         glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
