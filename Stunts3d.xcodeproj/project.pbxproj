@@ -133,12 +133,10 @@
 		83104C2413D2CDB900F688D2 /* SpuGatheringCollisionDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AEE13D2CDB900F688D2 /* SpuGatheringCollisionDispatcher.cpp */; };
 		83104C2513D2CDB900F688D2 /* SpuLibspe2Support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AF013D2CDB900F688D2 /* SpuLibspe2Support.cpp */; };
 		83104C2613D2CDB900F688D2 /* boxBoxDistance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AF413D2CDB900F688D2 /* boxBoxDistance.cpp */; };
-		83104C2713D2CDB900F688D2 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83104AF613D2CDB900F688D2 /* readme.txt */; };
 		83104C2813D2CDB900F688D2 /* SpuCollisionShapes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AF713D2CDB900F688D2 /* SpuCollisionShapes.cpp */; };
 		83104C2913D2CDB900F688D2 /* SpuContactResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AF913D2CDB900F688D2 /* SpuContactResult.cpp */; };
 		83104C2A13D2CDB900F688D2 /* SpuGatheringCollisionTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AFC13D2CDB900F688D2 /* SpuGatheringCollisionTask.cpp */; };
 		83104C2B13D2CDB900F688D2 /* SpuMinkowskiPenetrationDepthSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104AFF13D2CDB900F688D2 /* SpuMinkowskiPenetrationDepthSolver.cpp */; };
-		83104C2C13D2CDB900F688D2 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83104B0313D2CDB900F688D2 /* readme.txt */; };
 		83104C2D13D2CDB900F688D2 /* SpuSampleTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104B0413D2CDB900F688D2 /* SpuSampleTask.cpp */; };
 		83104C2E13D2CDB900F688D2 /* SpuSampleTaskProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104B0613D2CDB900F688D2 /* SpuSampleTaskProcess.cpp */; };
 		83104C2F13D2CDB900F688D2 /* Win32ThreadSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104B0C13D2CDB900F688D2 /* Win32ThreadSupport.cpp */; };
@@ -171,8 +169,6 @@
 		83835F9913B351DE0080E844 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83835F9813B351DE0080E844 /* main.m */; };
 		83835F9C13B351DE0080E844 /* Stunts3dAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83835F9B13B351DE0080E844 /* Stunts3dAppDelegate.m */; };
 		83835F9F13B351DE0080E844 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83835F9D13B351DE0080E844 /* MainWindow.xib */; };
-		83835FA113B351DE0080E844 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 83835FA013B351DE0080E844 /* Shader.fsh */; };
-		83835FA313B351DE0080E844 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 83835FA213B351DE0080E844 /* Shader.vsh */; };
 		83835FA613B351DE0080E844 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83835FA513B351DE0080E844 /* EAGLView.m */; };
 		83835FA913B351DE0080E844 /* Stunts3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83835FA813B351DE0080E844 /* Stunts3dViewController.m */; };
 		83835FAC13B351DE0080E844 /* Stunts3dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83835FAA13B351DE0080E844 /* Stunts3dViewController.xib */; };
@@ -486,7 +482,6 @@
 		83104AF313D2CDB900F688D2 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		83104AF413D2CDB900F688D2 /* boxBoxDistance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = boxBoxDistance.cpp; sourceTree = "<group>"; };
 		83104AF513D2CDB900F688D2 /* boxBoxDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boxBoxDistance.h; sourceTree = "<group>"; };
-		83104AF613D2CDB900F688D2 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		83104AF713D2CDB900F688D2 /* SpuCollisionShapes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuCollisionShapes.cpp; sourceTree = "<group>"; };
 		83104AF813D2CDB900F688D2 /* SpuCollisionShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuCollisionShapes.h; sourceTree = "<group>"; };
 		83104AF913D2CDB900F688D2 /* SpuContactResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuContactResult.cpp; sourceTree = "<group>"; };
@@ -498,7 +493,6 @@
 		83104AFF13D2CDB900F688D2 /* SpuMinkowskiPenetrationDepthSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuMinkowskiPenetrationDepthSolver.cpp; sourceTree = "<group>"; };
 		83104B0013D2CDB900F688D2 /* SpuMinkowskiPenetrationDepthSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuMinkowskiPenetrationDepthSolver.h; sourceTree = "<group>"; };
 		83104B0113D2CDB900F688D2 /* SpuPreferredPenetrationDirections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuPreferredPenetrationDirections.h; sourceTree = "<group>"; };
-		83104B0313D2CDB900F688D2 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		83104B0413D2CDB900F688D2 /* SpuSampleTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuSampleTask.cpp; sourceTree = "<group>"; };
 		83104B0513D2CDB900F688D2 /* SpuSampleTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuSampleTask.h; sourceTree = "<group>"; };
 		83104B0613D2CDB900F688D2 /* SpuSampleTaskProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuSampleTaskProcess.cpp; sourceTree = "<group>"; };
@@ -601,8 +595,6 @@
 		83835F9A13B351DE0080E844 /* Stunts3dAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stunts3dAppDelegate.h; sourceTree = "<group>"; };
 		83835F9B13B351DE0080E844 /* Stunts3dAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stunts3dAppDelegate.m; sourceTree = "<group>"; };
 		83835F9E13B351DE0080E844 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		83835FA013B351DE0080E844 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		83835FA213B351DE0080E844 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		83835FA413B351DE0080E844 /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		83835FA513B351DE0080E844 /* EAGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
 		83835FA713B351DE0080E844 /* Stunts3dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stunts3dViewController.h; sourceTree = "<group>"; };
@@ -1078,7 +1070,6 @@
 				83104AF313D2CDB900F688D2 /* Box.h */,
 				83104AF413D2CDB900F688D2 /* boxBoxDistance.cpp */,
 				83104AF513D2CDB900F688D2 /* boxBoxDistance.h */,
-				83104AF613D2CDB900F688D2 /* readme.txt */,
 				83104AF713D2CDB900F688D2 /* SpuCollisionShapes.cpp */,
 				83104AF813D2CDB900F688D2 /* SpuCollisionShapes.h */,
 				83104AF913D2CDB900F688D2 /* SpuContactResult.cpp */,
@@ -1097,7 +1088,6 @@
 		83104B0213D2CDB900F688D2 /* SpuSampleTask */ = {
 			isa = PBXGroup;
 			children = (
-				83104B0313D2CDB900F688D2 /* readme.txt */,
 				83104B0413D2CDB900F688D2 /* SpuSampleTask.cpp */,
 				83104B0513D2CDB900F688D2 /* SpuSampleTask.h */,
 			);
@@ -1291,8 +1281,6 @@
 				83835F9A13B351DE0080E844 /* Stunts3dAppDelegate.h */,
 				83835F9B13B351DE0080E844 /* Stunts3dAppDelegate.m */,
 				83835F9D13B351DE0080E844 /* MainWindow.xib */,
-				83835FA013B351DE0080E844 /* Shader.fsh */,
-				83835FA213B351DE0080E844 /* Shader.vsh */,
 				83835FA413B351DE0080E844 /* EAGLView.h */,
 				83835FA513B351DE0080E844 /* EAGLView.m */,
 				83835FA713B351DE0080E844 /* Stunts3dViewController.h */,
@@ -1376,8 +1364,6 @@
 			files = (
 				83835F9613B351DD0080E844 /* InfoPlist.strings in Resources */,
 				83835F9F13B351DE0080E844 /* MainWindow.xib in Resources */,
-				83835FA113B351DE0080E844 /* Shader.fsh in Resources */,
-				83835FA313B351DE0080E844 /* Shader.vsh in Resources */,
 				83835FAC13B351DE0080E844 /* Stunts3dViewController.xib in Resources */,
 				8356777813B5CD70009C0D18 /* Terrain1.txt in Resources */,
 				833BD65E13C995CC00E90CCB /* Terrain2.txt in Resources */,
@@ -1385,8 +1371,6 @@
 				83E8F5C713CAE39700445933 /* grass_256.jpg in Resources */,
 				83F3E53D13CF178400A5892E /* texture_256.jpg in Resources */,
 				83104BE313D2CDB900F688D2 /* CMakeLists.txt in Resources */,
-				83104C2713D2CDB900F688D2 /* readme.txt in Resources */,
-				83104C2C13D2CDB900F688D2 /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
