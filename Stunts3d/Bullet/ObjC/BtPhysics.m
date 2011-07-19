@@ -34,6 +34,8 @@
         dynamicsWorld->setGravity(btVector3(0,0,-10));
         
         // Do_everything_else_here
+        btCollisionShape* groundShape = new btStaticPlaneShape(btVector3(0,1,0),1);
+
     }
     return self;
 }
