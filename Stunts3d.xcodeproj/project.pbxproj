@@ -160,6 +160,7 @@
 		833BD65E13C995CC00E90CCB /* Terrain2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 833BD65D13C995CC00E90CCB /* Terrain2.txt */; };
 		8356777113B5C7D1009C0D18 /* Terrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8356777013B5C7D1009C0D18 /* Terrain.m */; };
 		8356777813B5CD70009C0D18 /* Terrain1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8356777713B5CD70009C0D18 /* Terrain1.txt */; };
+		837120FE13D43E7800E0A932 /* BtPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 837120FD13D43E7800E0A932 /* BtPhysics.m */; };
 		83835F8813B351DD0080E844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83835F8713B351DD0080E844 /* UIKit.framework */; };
 		83835F8A13B351DD0080E844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83835F8913B351DD0080E844 /* Foundation.framework */; };
 		83835F8C13B351DD0080E844 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83835F8B13B351DD0080E844 /* CoreGraphics.framework */; };
@@ -219,7 +220,7 @@
 		8310498313D2CDB900F688D2 /* btCollisionObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btCollisionObject.cpp; sourceTree = "<group>"; };
 		8310498413D2CDB900F688D2 /* btCollisionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btCollisionObject.h; sourceTree = "<group>"; };
 		8310498513D2CDB900F688D2 /* btCollisionWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btCollisionWorld.cpp; sourceTree = "<group>"; };
-		8310498613D2CDB900F688D2 /* btCollisionWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btCollisionWorld.h; sourceTree = "<group>"; };
+		8310498613D2CDB900F688D2 /* btCollisionWorld.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = btCollisionWorld.h; sourceTree = "<group>"; };
 		8310498713D2CDB900F688D2 /* btCompoundCollisionAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btCompoundCollisionAlgorithm.cpp; sourceTree = "<group>"; };
 		8310498813D2CDB900F688D2 /* btCompoundCollisionAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btCompoundCollisionAlgorithm.h; sourceTree = "<group>"; };
 		8310498913D2CDB900F688D2 /* btConvex2dConvex2dAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btConvex2dConvex2dAlgorithm.cpp; sourceTree = "<group>"; };
@@ -431,7 +432,7 @@
 		83104A6213D2CDB900F688D2 /* btContinuousDynamicsWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btContinuousDynamicsWorld.cpp; sourceTree = "<group>"; };
 		83104A6313D2CDB900F688D2 /* btContinuousDynamicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btContinuousDynamicsWorld.h; sourceTree = "<group>"; };
 		83104A6413D2CDB900F688D2 /* btDiscreteDynamicsWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btDiscreteDynamicsWorld.cpp; sourceTree = "<group>"; };
-		83104A6513D2CDB900F688D2 /* btDiscreteDynamicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btDiscreteDynamicsWorld.h; sourceTree = "<group>"; };
+		83104A6513D2CDB900F688D2 /* btDiscreteDynamicsWorld.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = btDiscreteDynamicsWorld.h; sourceTree = "<group>"; };
 		83104A6613D2CDB900F688D2 /* btDynamicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btDynamicsWorld.h; sourceTree = "<group>"; };
 		83104A6713D2CDB900F688D2 /* btRigidBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btRigidBody.cpp; sourceTree = "<group>"; };
 		83104A6813D2CDB900F688D2 /* btRigidBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRigidBody.h; sourceTree = "<group>"; };
@@ -582,6 +583,8 @@
 		8356777013B5C7D1009C0D18 /* Terrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Terrain.m; sourceTree = "<group>"; };
 		8356777213B5C807009C0D18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		8356777713B5CD70009C0D18 /* Terrain1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Terrain1.txt; sourceTree = "<group>"; };
+		837120FC13D43E7800E0A932 /* BtPhysics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = BtPhysics.h; sourceTree = "<group>"; };
+		837120FD13D43E7800E0A932 /* BtPhysics.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BtPhysics.m; sourceTree = "<group>"; };
 		83835F8313B351DD0080E844 /* Stunts3d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stunts3d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83835F8713B351DD0080E844 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83835F8913B351DD0080E844 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -626,6 +629,7 @@
 		8310495813D2CDB900F688D2 /* Bullet */ = {
 			isa = PBXGroup;
 			children = (
+				837120FA13D43E3800E0A932 /* ObjC */,
 				8310495913D2CDB900F688D2 /* src */,
 			);
 			path = Bullet;
@@ -1243,6 +1247,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		837120FA13D43E3800E0A932 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				837120FC13D43E7800E0A932 /* BtPhysics.h */,
+				837120FD13D43E7800E0A932 /* BtPhysics.m */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
 		83835F7813B351DC0080E844 = {
 			isa = PBXGroup;
 			children = (
@@ -1536,6 +1549,7 @@
 				83104C4513D2CDB900F688D2 /* MiniCL.cpp in Sources */,
 				83104C4613D2CDB900F688D2 /* MiniCLTask.cpp in Sources */,
 				83104C4713D2CDB900F688D2 /* MiniCLTaskScheduler.cpp in Sources */,
+				837120FE13D43E7800E0A932 /* BtPhysics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
