@@ -31,20 +31,21 @@
         
         // The world.
         dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher,broadphase,solver,collisionConfiguration);
-        dynamicsWorld->setGravity(btVector3(0,-10,0));
+        dynamicsWorld->setGravity(btVector3(0,0,-10));
         
         // Do_everything_else_here
-        
-        
-        // Clean up behind ourselves like good little programmers
-        delete dynamicsWorld;
-        delete solver;
-        delete dispatcher;
-        delete collisionConfiguration;
-        delete broadphase;
-        
     }
     return self;
+}
+
+-(void)dealloc {
+    // Clean up behind ourselves like good little programmers
+    delete dynamicsWorld;
+    delete solver;
+    delete dispatcher;
+    delete collisionConfiguration;
+    delete broadphase;
+    [super dealloc];
 }
 
 @end
