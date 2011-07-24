@@ -16,6 +16,8 @@
 #import <OpenGLES/ES2/glext.h>
 
 @class Terrain;
+@class BtPhysics;
+@class BtSphere;
 
 @interface Stunts3dViewController : UIViewController {
 @private

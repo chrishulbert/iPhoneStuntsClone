@@ -173,6 +173,8 @@
 		83835FA613B351DE0080E844 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83835FA513B351DE0080E844 /* EAGLView.m */; };
 		83835FA913B351DE0080E844 /* Stunts3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83835FA813B351DE0080E844 /* Stunts3dViewController.m */; };
 		83835FAC13B351DE0080E844 /* Stunts3dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83835FAA13B351DE0080E844 /* Stunts3dViewController.xib */; };
+		83B352F313D6CC070008DA0A /* BtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B352F213D6CC060008DA0A /* BtObject.m */; };
+		83CEADC513D6B99300EAD152 /* BtSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CEADC413D6B99300EAD152 /* BtSphere.m */; };
 		83E8F5C313CAE2B200445933 /* Attribs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83E8F5C213CAE2B200445933 /* Attribs.txt */; };
 		83E8F5C713CAE39700445933 /* grass_256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E8F5C613CAE39700445933 /* grass_256.jpg */; };
 		83E8F5CA13CD9BFD00445933 /* Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E8F5C913CD9BFD00445933 /* Texture.m */; };
@@ -583,7 +585,7 @@
 		8356777013B5C7D1009C0D18 /* Terrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Terrain.m; sourceTree = "<group>"; };
 		8356777213B5C807009C0D18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		8356777713B5CD70009C0D18 /* Terrain1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Terrain1.txt; sourceTree = "<group>"; };
-		837120FC13D43E7800E0A932 /* BtPhysics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = BtPhysics.h; sourceTree = "<group>"; };
+		837120FC13D43E7800E0A932 /* BtPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtPhysics.h; sourceTree = "<group>"; };
 		837120FD13D43E7800E0A932 /* BtPhysics.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BtPhysics.m; sourceTree = "<group>"; };
 		83835F8313B351DD0080E844 /* Stunts3d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stunts3d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83835F8713B351DD0080E844 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -603,6 +605,10 @@
 		83835FA713B351DE0080E844 /* Stunts3dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stunts3dViewController.h; sourceTree = "<group>"; };
 		83835FA813B351DE0080E844 /* Stunts3dViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stunts3dViewController.m; sourceTree = "<group>"; };
 		83835FAB13B351DE0080E844 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Stunts3dViewController.xib; sourceTree = "<group>"; };
+		83B352F113D6CC060008DA0A /* BtObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtObject.h; sourceTree = "<group>"; };
+		83B352F213D6CC060008DA0A /* BtObject.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BtObject.m; sourceTree = "<group>"; };
+		83CEADC313D6B99300EAD152 /* BtSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtSphere.h; sourceTree = "<group>"; };
+		83CEADC413D6B99300EAD152 /* BtSphere.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BtSphere.m; sourceTree = "<group>"; };
 		83E8F5C213CAE2B200445933 /* Attribs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attribs.txt; sourceTree = "<group>"; };
 		83E8F5C613CAE39700445933 /* grass_256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass_256.jpg; sourceTree = "<group>"; };
 		83E8F5C813CD9BFD00445933 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
@@ -1252,6 +1258,10 @@
 			children = (
 				837120FC13D43E7800E0A932 /* BtPhysics.h */,
 				837120FD13D43E7800E0A932 /* BtPhysics.m */,
+				83CEADC313D6B99300EAD152 /* BtSphere.h */,
+				83CEADC413D6B99300EAD152 /* BtSphere.m */,
+				83B352F113D6CC060008DA0A /* BtObject.h */,
+				83B352F213D6CC060008DA0A /* BtObject.m */,
 			);
 			path = ObjC;
 			sourceTree = "<group>";
@@ -1550,6 +1560,8 @@
 				83104C4613D2CDB900F688D2 /* MiniCLTask.cpp in Sources */,
 				83104C4713D2CDB900F688D2 /* MiniCLTaskScheduler.cpp in Sources */,
 				837120FE13D43E7800E0A932 /* BtPhysics.m in Sources */,
+				83CEADC513D6B99300EAD152 /* BtSphere.m in Sources */,
+				83B352F313D6CC070008DA0A /* BtObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

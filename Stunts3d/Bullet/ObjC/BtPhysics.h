@@ -13,6 +13,10 @@ class btDefaultCollisionConfiguration;
 class btCollisionDispatcher;
 class btSequentialImpulseConstraintSolver;
 class btDiscreteDynamicsWorld;
+class btCollisionShape;
+class btDefaultMotionState;
+class btRigidBody;
+@class BtObject;
 
 @interface BtPhysics : NSObject {
     btBroadphaseInterface* broadphase;
@@ -20,6 +24,11 @@ class btDiscreteDynamicsWorld;
     btCollisionDispatcher* dispatcher;
     btSequentialImpulseConstraintSolver* solver;
     btDiscreteDynamicsWorld* dynamicsWorld;    
+    btCollisionShape* groundShape;
+    btDefaultMotionState* groundMotionState;
+    btRigidBody* groundRigidBody;
 }
+
+- (void)addObject:(BtObject*)object;
 
 @end
