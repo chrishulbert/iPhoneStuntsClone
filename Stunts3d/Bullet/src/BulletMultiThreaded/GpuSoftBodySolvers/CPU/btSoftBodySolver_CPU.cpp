@@ -189,7 +189,7 @@ void btCPUSoftBodySolver::optimize( btAlignedObjectArray< btSoftBody * > &softBo
 
 			int firstLink = getLinkData().getNumLinks();
 			int numLinks = softBody->m_links.size();
-			int maxLinks = numLinks;
+//			int maxLinks = numLinks;
 			
 			// Allocate space for the links
 			getLinkData().createLinks( numLinks );
@@ -308,7 +308,7 @@ void btCPUSoftBodySolver::applyForces( float solverdt )
 {		
 	using namespace Vectormath::Aos;
 
-	int numVertices = m_vertexData.getNumVertices();			
+//	int numVertices = m_vertexData.getNumVertices();			
 	for( int clothIndex = 0; clothIndex < m_softBodySet.size(); ++clothIndex )
 	{
 		btAcceleratedSoftBodyInterface *currentCloth = m_softBodySet[clothIndex];
@@ -614,16 +614,16 @@ void btCPUSoftBodySolver::solveConstraints( float solverdt )
 	{
 		btAcceleratedSoftBodyInterface *currentCloth = m_softBodySet[clothIndex];
 
-		const int startLink = currentCloth->getFirstLink();
-		const int numLinks = currentCloth->getNumLinks();
+//		const int startLink = currentCloth->getFirstLink();
+//		const int numLinks = currentCloth->getNumLinks();
 		const int startVertex = currentCloth->getFirstVertex();
 		const int numVertices = currentCloth->getNumVertices();
 		const int lastVertex = startVertex + numVertices;
 		// Update the velocities based on the change in position
 		// TODO: Damping should only be applied to the action of link constraints so the cloth still falls but then moves stiffly once it hits something
-		float velocityCoefficient = (1.f - m_perClothDampingFactor[clothIndex]);
-		float velocityCorrectionCoefficient = m_perClothVelocityCorrectionCoefficient[clothIndex];
-		float isolverDt = 1.f/solverdt;
+//		float velocityCoefficient = (1.f - m_perClothDampingFactor[clothIndex]);
+//		float velocityCorrectionCoefficient = m_perClothVelocityCorrectionCoefficient[clothIndex];
+//		float isolverDt = 1.f/solverdt;
 
 		for(int vertexIndex = startVertex; vertexIndex < lastVertex; ++vertexIndex)
 		{
@@ -650,7 +650,7 @@ void btCPUSoftBodySolver::solveConstraints( float solverdt )
 		int endVertex = startVertex + numVertices;		
 
 		float velocityCoefficient = (1.f - m_perClothDampingFactor[clothIndex]);
-		float velocityCorrectionCoefficient = m_perClothVelocityCorrectionCoefficient[clothIndex];
+//		float velocityCorrectionCoefficient = m_perClothVelocityCorrectionCoefficient[clothIndex];
 		float isolverDt = 1.f/solverdt;
 
 		int startObject = m_perClothCollisionObjects[clothIndex].firstObject;

@@ -29,28 +29,32 @@ subject to the following restrictions:
 
 //#define DEBUG_MINICL_KERNELS 1
 
-static char* spPlatformID = "MiniCL, SCEA";
-static char* spDriverVersion= "1.0";
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+#pragma clang diagnostic ignored "-Wwrite-strings"
 
-CL_API_ENTRY cl_int CL_API_CALL clGetPlatformIDs(
-	cl_uint           num_entries,
-    cl_platform_id *  platforms,
-    cl_uint *         num_platforms ) CL_API_SUFFIX__VERSION_1_0
-{
-	if(platforms != NULL)
-	{
-		if(num_entries <= 0)
-		{
-			return CL_INVALID_VALUE; 
-		}
-		*((char**)platforms) = spPlatformID;
-	}
-	if(num_platforms != NULL)
-	{
-		*num_platforms = 1;
-	}
-	return CL_SUCCESS;
-}
+const static char* spPlatformID = "MiniCL, SCEA";
+const static char* spDriverVersion= "1.0";
+
+// Commented out to avoid compiler warnings, this is an ios game not a ps3 game after all, we don't need all this stuff!
+//CL_API_ENTRY cl_int CL_API_CALL clGetPlatformIDs(
+//	cl_uint           num_entries,
+//    cl_platform_id *  platforms,
+//    cl_uint *         num_platforms ) CL_API_SUFFIX__VERSION_1_0
+//{
+//	if(platforms != NULL)
+//	{
+//		if(num_entries <= 0)
+//		{
+//			return CL_INVALID_VALUE; 
+//		}
+//		*((char**)platforms) = spPlatformID;
+//	}
+//	if(num_platforms != NULL)
+//	{
+//		*num_platforms = 1;
+//	}
+//	return CL_SUCCESS;
+//}
 
 
 CL_API_ENTRY cl_int CL_API_CALL clGetPlatformInfo(
@@ -108,7 +112,7 @@ CL_API_ENTRY cl_int CL_API_CALL clGetDeviceInfo(
 				sprintf((char*)param_value,"%s",cpuName);
 			} else
 			{
-				printf("error: param_value_size should be at least %d, but it is %d\n",nameLen,param_value_size);
+				printf("error: param_value_size should be at least %d, but it is %d\n",nameLen,(int)param_value_size);
 				return CL_INVALID_VALUE; 
 			}
 			break;
@@ -121,7 +125,7 @@ CL_API_ENTRY cl_int CL_API_CALL clGetDeviceInfo(
 				*deviceType = CL_DEVICE_TYPE_CPU;
 			} else
 			{
-				printf("error: param_value_size should be at least %d\n",sizeof(cl_device_type));
+				printf("error: param_value_size should be at least %d\n",(int)sizeof(cl_device_type));
 				return CL_INVALID_VALUE; 
 			}
 			break;
@@ -134,7 +138,7 @@ CL_API_ENTRY cl_int CL_API_CALL clGetDeviceInfo(
 				*numUnits= 4;
 			} else
 			{
-				printf("error: param_value_size should be at least %d\n",sizeof(cl_uint));
+				printf("error: param_value_size should be at least %d\n",(int)sizeof(cl_uint));
 				return CL_INVALID_VALUE; 
 			}
 
@@ -152,7 +156,7 @@ CL_API_ENTRY cl_int CL_API_CALL clGetDeviceInfo(
 				workItemSize[2] = 16;
 			} else
 			{
-				printf("error: param_value_size should be at least %d\n",sizeof(cl_uint));
+				printf("error: param_value_size should be at least %d\n",(int)sizeof(cl_uint));
 				return CL_INVALID_VALUE; 
 			}
 			break;
@@ -484,7 +488,7 @@ CL_API_ENTRY cl_int CL_API_CALL clSetKernelArg(cl_kernel    clKernel ,
 		if (arg_size>MINICL_MAX_ARGLENGTH)
 		//if (arg_size != MINICL_MAX_ARGLENGTH)
 		{
-			printf("error: clSetKernelArg argdata too large: %d (maximum is %d)\n",arg_size,MINICL_MAX_ARGLENGTH);
+			printf("error: clSetKernelArg argdata too large: %d (maximum is %lu)\n",(int)arg_size,MINICL_MAX_ARGLENGTH);
 		} 
 		else
 		{
@@ -636,12 +640,12 @@ CL_API_ENTRY cl_context CL_API_CALL clCreateContextFromType(cl_context_propertie
 //	int maxNumOutstandingTasks = 2;
 //	int maxNumOutstandingTasks = 1;
 	gMiniCLNumOutstandingTasks = maxNumOutstandingTasks;
-	const int maxNumOfThreadSupports = 8;
-	static int sUniqueThreadSupportIndex = 0;
-	static char* sUniqueThreadSupportName[maxNumOfThreadSupports] = 
-	{
-		"MiniCL_0", "MiniCL_1", "MiniCL_2", "MiniCL_3", "MiniCL_4", "MiniCL_5", "MiniCL_6", "MiniCL_7" 
-	};
+//	const int maxNumOfThreadSupports = 8;
+//	static int sUniqueThreadSupportIndex = 0;
+//	static const char* sUniqueThreadSupportName[maxNumOfThreadSupports] = 
+//	{
+//		"MiniCL_0", "MiniCL_1", "MiniCL_2", "MiniCL_3", "MiniCL_4", "MiniCL_5", "MiniCL_6", "MiniCL_7" 
+//	};
 
 	btThreadSupportInterface* threadSupport = 0;
 
