@@ -12,8 +12,8 @@
 #import "EAGLView.h"
 #import "Terrain.h"
 #import "Settings.h"
-#import "BtPhysics.h"
 #import "ConciseKit.h"
+#import "Bullet.h"
 
 // Uniform index.
 enum {
@@ -95,23 +95,6 @@ enum {
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [self startAnimation];    
-    [super viewWillAppear:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated {
-    [self stopAnimation];
-    [super viewWillDisappear:animated];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -119,10 +102,12 @@ enum {
     [self.terrain load];
     
     self.physics = $new(BtPhysics);
+    
+    BtSphere* sph = [BtSphere sphereWithRadi
+//    [self.physics addObject:]
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
 	[super viewDidUnload];
 	
     if (program) {
@@ -136,13 +121,20 @@ enum {
 	self.context = nil;	
 }
 
-- (NSInteger)animationFrameInterval
-{
+- (void)viewWillAppear:(BOOL)animated {
+    [self startAnimation];    
+    [super viewWillAppear:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [self stopAnimation];
+    [super viewWillDisappear:animated];
+}
+
+- (NSInteger)animationFrameInterval {
     return animationFrameInterval;
 }
 
-- (void)setAnimationFrameInterval:(NSInteger)frameInterval
-{
+- (void)setAnimationFrameInterval:(NSInteger)frameInterval {
     /*
 	 Frame interval defines how many display frames must pass between each time the display link fires.
 	 The display link will only fire 30 times a second when the frame internal is two on a display that refreshes 60 times a second. The default frame interval setting of one will fire 60 times a second when the display refreshes at 60 times a second. A frame interval setting of less than one results in undefined behavior.
@@ -157,8 +149,7 @@ enum {
     }
 }
 
-- (void)startAnimation
-{
+- (void)startAnimation {
     if (!animating) {
         CADisplayLink *aDisplayLink = [[UIScreen mainScreen] displayLinkWithTarget:self selector:@selector(drawFrame)];
         [aDisplayLink setFrameInterval:animationFrameInterval];
@@ -169,8 +160,7 @@ enum {
     }
 }
 
-- (void)stopAnimation
-{
+- (void)stopAnimation {
     if (animating) {
         [self.displayLink invalidate];
         self.displayLink = nil;
@@ -178,8 +168,7 @@ enum {
     }
 }
 
-- (void)gluPerspective:(double)fovy :(double)aspect :(double)zNear :(double)zFar
-{
+- (void)gluPerspective:(double)fovy :(double)aspect :(double)zNear :(double)zFar {
     // Start in projection mode.
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -191,8 +180,7 @@ enum {
     glFrustumf(xmin, xmax, ymin, ymax, zNear, zFar);
 }
 
-static void normalize(GLfloat v[3])
-{
+static void normalize(GLfloat v[3]) {
     GLfloat r;
     
     r=(GLfloat)sqrt(v[0]*v[0] + v[1]*v[1] + v[2]*v[2]);
@@ -206,16 +194,14 @@ static void normalize(GLfloat v[3])
     v[2]/=r;
 }
 
-static void __gluMakeIdentityf(GLfloat m[16])
-{
+static void __gluMakeIdentityf(GLfloat m[16]) {
     m[0+4*0] = 1; m[0+4*1] = 0; m[0+4*2] = 0; m[0+4*3] = 0;
     m[1+4*0] = 0; m[1+4*1] = 1; m[1+4*2] = 0; m[1+4*3] = 0;
     m[2+4*0] = 0; m[2+4*1] = 0; m[2+4*2] = 1; m[2+4*3] = 0;
     m[3+4*0] = 0; m[3+4*1] = 0; m[3+4*2] = 0; m[3+4*3] = 1;
 }
 
-static void cross(GLfloat v1[3], GLfloat v2[3], GLfloat result[3])
-{
+static void cross(GLfloat v1[3], GLfloat v2[3], GLfloat result[3]) {
     result[0] = v1[1]*v2[2] - v1[2]*v2[1];
     result[1] = v1[2]*v2[0] - v1[0]*v2[2];
     result[2] = v1[0]*v2[1] - v1[1]*v2[0];
@@ -223,8 +209,7 @@ static void cross(GLfloat v1[3], GLfloat v2[3], GLfloat result[3])
 
 void gluLookAt(GLfloat eyex, GLfloat eyey, GLfloat eyez, GLfloat centerx,
           GLfloat centery, GLfloat centerz, GLfloat upx, GLfloat upy,
-          GLfloat upz)
-{
+          GLfloat upz) {
     GLfloat forward[3], side[3], up[3];
     GLfloat m[4][4];
     
@@ -262,8 +247,7 @@ void gluLookAt(GLfloat eyex, GLfloat eyey, GLfloat eyez, GLfloat centerx,
     glTranslatef(-eyex, -eyey, -eyez);
 }
 
-- (void)drawFrame
-{
+- (void)drawFrame {
     [(EAGLView *)self.view setFramebuffer];
 
     // Make a spinning camera

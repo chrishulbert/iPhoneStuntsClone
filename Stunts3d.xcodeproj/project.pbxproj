@@ -188,6 +188,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830D6EC113DECB8600AE4274 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		8310495A13D2CDB900F688D2 /* btBulletCollisionCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletCollisionCommon.h; sourceTree = "<group>"; };
 		8310495B13D2CDB900F688D2 /* btBulletDynamicsCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletDynamicsCommon.h; sourceTree = "<group>"; };
 		8310495C13D2CDB900F688D2 /* Bullet-C-Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bullet-C-Api.h"; sourceTree = "<group>"; };
@@ -1301,6 +1302,7 @@
 				83CEADC413D6B99300EAD152 /* BtSphere.m */,
 				83B352F113D6CC060008DA0A /* BtObject.h */,
 				83B352F213D6CC060008DA0A /* BtObject.m */,
+				830D6EC113DECB8600AE4274 /* Bullet.h */,
 			);
 			path = ObjC;
 			sourceTree = "<group>";

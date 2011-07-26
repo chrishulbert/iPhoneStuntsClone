@@ -26,6 +26,10 @@ class btRigidBody;
 #endif    
 }
 
+#ifdef __cplusplus
 - (btRigidBody*)getRigidBody;
+#else
+- (void*)getRigidBody;
+#endif    
 
 @end
