@@ -103,7 +103,8 @@ enum {
     
     self.physics = $new(BtPhysics);
     
-    BtSphere* sph = [BtSphere sphereWithRadi
+    BtSphere* sph = [BtSphere sphereWithRadius:1 atX:0 y:0 z:10];
+    [self.physics addObject:sph];
 //    [self.physics addObject:]
 }
 
