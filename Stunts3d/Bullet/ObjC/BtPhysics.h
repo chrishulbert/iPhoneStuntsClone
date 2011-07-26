@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#ifdef __cplusplus
 class btBroadphaseInterface;
 class btDefaultCollisionConfiguration;
 class btCollisionDispatcher;
@@ -16,9 +17,11 @@ class btDiscreteDynamicsWorld;
 class btCollisionShape;
 class btDefaultMotionState;
 class btRigidBody;
+#endif
 @class BtObject;
 
 @interface BtPhysics : NSObject {
+#ifdef __cplusplus
     btBroadphaseInterface* broadphase;
     btDefaultCollisionConfiguration* collisionConfiguration;
     btCollisionDispatcher* dispatcher;
@@ -27,6 +30,16 @@ class btRigidBody;
     btCollisionShape* groundShape;
     btDefaultMotionState* groundMotionState;
     btRigidBody* groundRigidBody;
+#else
+    void* broadphase;
+    void* collisionConfiguration;
+    void* dispatcher;
+    void* solver;
+    void* dynamicsWorld;    
+    void* groundShape;
+    void* groundMotionState;
+    void* groundRigidBody;
+#endif    
 }
 
 - (void)addObject:(BtObject*)object;

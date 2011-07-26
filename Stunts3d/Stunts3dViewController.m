@@ -12,6 +12,8 @@
 #import "EAGLView.h"
 #import "Terrain.h"
 #import "Settings.h"
+#import "BtPhysics.h"
+#import "ConciseKit.h"
 
 // Uniform index.
 enum {
@@ -36,6 +38,7 @@ enum {
 
 @synthesize animating, context, displayLink;
 @synthesize terrain;
+@synthesize physics;
 
 - (void)awakeFromNib
 {
@@ -86,6 +89,9 @@ enum {
     
     [context release];
     
+    self.terrain = nil;
+    self.physics = nil;
+    
     [super dealloc];
 }
 
@@ -97,17 +103,12 @@ enum {
     // Release any cached data, images, etc. that aren't in use.
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self startAnimation];
-    
+- (void)viewWillAppear:(BOOL)animated {
+    [self startAnimation];    
     [super viewWillAppear:animated];
 }
-
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
     [self stopAnimation];
-    
     [super viewWillDisappear:animated];
 }
 
@@ -116,6 +117,8 @@ enum {
     
     self.terrain = [[[Terrain alloc] init] autorelease];
     [self.terrain load];
+    
+    self.physics = $new(BtPhysics);
 }
 
 - (void)viewDidUnload

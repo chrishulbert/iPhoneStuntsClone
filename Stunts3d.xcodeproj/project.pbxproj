@@ -158,6 +158,12 @@
 		83104C4613D2CDB900F688D2 /* MiniCLTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104B5313D2CDB900F688D2 /* MiniCLTask.cpp */; };
 		83104C4713D2CDB900F688D2 /* MiniCLTaskScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83104B5513D2CDB900F688D2 /* MiniCLTaskScheduler.cpp */; };
 		833BD65E13C995CC00E90CCB /* Terrain2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 833BD65D13C995CC00E90CCB /* Terrain2.txt */; };
+		834D10A213DEC91D000284D5 /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 834D108013DEC91D000284D5 /* ConciseKit.m */; };
+		834D10A313DEC91D000284D5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 834D108113DEC91D000284D5 /* LICENSE */; };
+		834D10A413DEC91D000284D5 /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 834D108313DEC91D000284D5 /* NSArray+ConciseKit.m */; };
+		834D10A513DEC91D000284D5 /* NSDictionary+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 834D108513DEC91D000284D5 /* NSDictionary+ConciseKit.m */; };
+		834D10A613DEC91D000284D5 /* NSString+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 834D108713DEC91D000284D5 /* NSString+ConciseKit.m */; };
+		834D10A713DEC91D000284D5 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 834D108813DEC91D000284D5 /* README.markdown */; };
 		8356777113B5C7D1009C0D18 /* Terrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8356777013B5C7D1009C0D18 /* Terrain.m */; };
 		8356777813B5CD70009C0D18 /* Terrain1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8356777713B5CD70009C0D18 /* Terrain1.txt */; };
 		837120FE13D43E7800E0A932 /* BtPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 837120FD13D43E7800E0A932 /* BtPhysics.m */; };
@@ -581,6 +587,19 @@
 		83104B6613D2CDB900F688D2 /* vectormath_aos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vectormath_aos.h; sourceTree = "<group>"; };
 		83104B6713D2CDB900F688D2 /* vmInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vmInclude.h; sourceTree = "<group>"; };
 		833BD65D13C995CC00E90CCB /* Terrain2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Terrain2.txt; sourceTree = "<group>"; };
+		834D107C13DEC91D000284D5 /* CKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAdditions.h; sourceTree = "<group>"; };
+		834D107D13DEC91D000284D5 /* CKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMacros.h; sourceTree = "<group>"; };
+		834D107E13DEC91D000284D5 /* CKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSingleton.h; sourceTree = "<group>"; };
+		834D107F13DEC91D000284D5 /* ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciseKit.h; sourceTree = "<group>"; };
+		834D108013DEC91D000284D5 /* ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKit.m; sourceTree = "<group>"; };
+		834D108113DEC91D000284D5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		834D108213DEC91D000284D5 /* NSArray+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConciseKit.h"; sourceTree = "<group>"; };
+		834D108313DEC91D000284D5 /* NSArray+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConciseKit.m"; sourceTree = "<group>"; };
+		834D108413DEC91D000284D5 /* NSDictionary+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConciseKit.h"; sourceTree = "<group>"; };
+		834D108513DEC91D000284D5 /* NSDictionary+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConciseKit.m"; sourceTree = "<group>"; };
+		834D108613DEC91D000284D5 /* NSString+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ConciseKit.h"; sourceTree = "<group>"; };
+		834D108713DEC91D000284D5 /* NSString+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ConciseKit.m"; sourceTree = "<group>"; };
+		834D108813DEC91D000284D5 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		8356776F13B5C7D1009C0D18 /* Terrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Terrain.h; sourceTree = "<group>"; };
 		8356777013B5C7D1009C0D18 /* Terrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Terrain.m; sourceTree = "<group>"; };
 		8356777213B5C807009C0D18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -1230,6 +1249,26 @@
 			path = sse;
 			sourceTree = "<group>";
 		};
+		834D105313DEC91D000284D5 /* ConciseKit */ = {
+			isa = PBXGroup;
+			children = (
+				834D107C13DEC91D000284D5 /* CKAdditions.h */,
+				834D107D13DEC91D000284D5 /* CKMacros.h */,
+				834D107E13DEC91D000284D5 /* CKSingleton.h */,
+				834D107F13DEC91D000284D5 /* ConciseKit.h */,
+				834D108013DEC91D000284D5 /* ConciseKit.m */,
+				834D108113DEC91D000284D5 /* LICENSE */,
+				834D108213DEC91D000284D5 /* NSArray+ConciseKit.h */,
+				834D108313DEC91D000284D5 /* NSArray+ConciseKit.m */,
+				834D108413DEC91D000284D5 /* NSDictionary+ConciseKit.h */,
+				834D108513DEC91D000284D5 /* NSDictionary+ConciseKit.m */,
+				834D108613DEC91D000284D5 /* NSString+ConciseKit.h */,
+				834D108713DEC91D000284D5 /* NSString+ConciseKit.m */,
+				834D108813DEC91D000284D5 /* README.markdown */,
+			);
+			path = ConciseKit;
+			sourceTree = "<group>";
+		};
 		8356776D13B5C7A0009C0D18 /* TerrainEngine */ = {
 			isa = PBXGroup;
 			children = (
@@ -1298,6 +1337,7 @@
 		83835F9113B351DD0080E844 /* Stunts3d */ = {
 			isa = PBXGroup;
 			children = (
+				834D105313DEC91D000284D5 /* ConciseKit */,
 				8310495813D2CDB900F688D2 /* Bullet */,
 				8356777613B5CD70009C0D18 /* Assets */,
 				8356776D13B5C7A0009C0D18 /* TerrainEngine */,
@@ -1394,6 +1434,8 @@
 				83E8F5C713CAE39700445933 /* grass_256.jpg in Resources */,
 				83F3E53D13CF178400A5892E /* texture_256.jpg in Resources */,
 				83104BE313D2CDB900F688D2 /* CMakeLists.txt in Resources */,
+				834D10A313DEC91D000284D5 /* LICENSE in Resources */,
+				834D10A713DEC91D000284D5 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1562,6 +1604,10 @@
 				837120FE13D43E7800E0A932 /* BtPhysics.m in Sources */,
 				83CEADC513D6B99300EAD152 /* BtSphere.m in Sources */,
 				83B352F313D6CC070008DA0A /* BtObject.m in Sources */,
+				834D10A213DEC91D000284D5 /* ConciseKit.m in Sources */,
+				834D10A413DEC91D000284D5 /* NSArray+ConciseKit.m in Sources */,
+				834D10A513DEC91D000284D5 /* NSDictionary+ConciseKit.m in Sources */,
+				834D10A613DEC91D000284D5 /* NSString+ConciseKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
