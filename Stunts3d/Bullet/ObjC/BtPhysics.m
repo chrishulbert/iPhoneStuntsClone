@@ -71,4 +71,9 @@
     [self.objects addObject:object];
 }
 
+// Step 1/60th of a second
+- (void)stepFrame {
+    dynamicsWorld->stepSimulation(1/60.f,10);
+}
+
 @end

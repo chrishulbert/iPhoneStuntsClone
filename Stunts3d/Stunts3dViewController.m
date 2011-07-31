@@ -105,7 +105,10 @@ enum {
     
     BtSphere* sph = [BtSphere sphereWithRadius:1 atX:0 y:0 z:10];
     [self.physics addObject:sph];
-//    [self.physics addObject:]
+    for (int i=0;i<100;i++) {
+        NSLog(@"%.2f", sph.getPos.z);
+        [self.physics stepFrame];
+    }
 }
 
 - (void)viewDidUnload {

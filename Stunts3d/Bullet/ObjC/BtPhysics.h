@@ -43,5 +43,6 @@ class btRigidBody;
 }
 
 - (void)addObject:(BtObject*)object;
+- (void)stepFrame; // Step 1/60th of a second
 
 @end

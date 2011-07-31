@@ -7,12 +7,24 @@
 //
 
 #import "BtObject.h"
-
+#include "btBulletDynamicsCommon.h"
 
 @implementation BtObject
 
 - (btRigidBody*)getRigidBody {
     return rigidBody;
 }
+
+- (btPos)getPos {
+    btTransform trans;
+    rigidBody->getMotionState()->getWorldTransform(trans);
+    btVector3 origin = trans.getOrigin();
+    btPos p;
+    p.x = origin.getX();
+    p.y = origin.getY();
+    p.z = origin.getZ();
+    return p;
+}
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BtTypes.h"
 
 #ifdef __cplusplus
 class btCollisionShape;
@@ -31,5 +32,6 @@ class btRigidBody;
 #else
 - (void*)getRigidBody;
 #endif    
+- (btPos)getPos;
 
 @end

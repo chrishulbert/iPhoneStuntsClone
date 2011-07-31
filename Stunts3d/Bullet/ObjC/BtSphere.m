@@ -24,7 +24,7 @@
         shape = new btSphereShape(1);
 
         motionState =
-        new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(0,50,0)));
+        new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(x,y,z)));
         
         btScalar mass = 1;
         btVector3 inertia(0,0,0);
