@@ -167,6 +167,7 @@
 		8356777113B5C7D1009C0D18 /* Terrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8356777013B5C7D1009C0D18 /* Terrain.m */; };
 		8356777813B5CD70009C0D18 /* Terrain1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8356777713B5CD70009C0D18 /* Terrain1.txt */; };
 		837120FE13D43E7800E0A932 /* BtPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 837120FD13D43E7800E0A932 /* BtPhysics.m */; };
+		8372E87013EAAE1900B6C63D /* BtTriangleMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372E86F13EAAE1900B6C63D /* BtTriangleMesh.m */; };
 		83835F8813B351DD0080E844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83835F8713B351DD0080E844 /* UIKit.framework */; };
 		83835F8A13B351DD0080E844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83835F8913B351DD0080E844 /* Foundation.framework */; };
 		83835F8C13B351DD0080E844 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83835F8B13B351DD0080E844 /* CoreGraphics.framework */; };
@@ -607,6 +608,8 @@
 		8356777713B5CD70009C0D18 /* Terrain1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Terrain1.txt; sourceTree = "<group>"; };
 		837120FC13D43E7800E0A932 /* BtPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtPhysics.h; sourceTree = "<group>"; };
 		837120FD13D43E7800E0A932 /* BtPhysics.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BtPhysics.m; sourceTree = "<group>"; };
+		8372E86E13EAAE1900B6C63D /* BtTriangleMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtTriangleMesh.h; sourceTree = "<group>"; };
+		8372E86F13EAAE1900B6C63D /* BtTriangleMesh.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = BtTriangleMesh.m; sourceTree = "<group>"; };
 		83835F8313B351DD0080E844 /* Stunts3d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stunts3d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83835F8713B351DD0080E844 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83835F8913B351DD0080E844 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1305,6 +1308,8 @@
 				83B352F113D6CC060008DA0A /* BtObject.h */,
 				83B352F213D6CC060008DA0A /* BtObject.m */,
 				83B09BDA13E54D16009CA435 /* BtTypes.h */,
+				8372E86E13EAAE1900B6C63D /* BtTriangleMesh.h */,
+				8372E86F13EAAE1900B6C63D /* BtTriangleMesh.m */,
 			);
 			path = ObjC;
 			sourceTree = "<group>";
@@ -1612,6 +1617,7 @@
 				834D10A413DEC91D000284D5 /* NSArray+ConciseKit.m in Sources */,
 				834D10A513DEC91D000284D5 /* NSDictionary+ConciseKit.m in Sources */,
 				834D10A613DEC91D000284D5 /* NSString+ConciseKit.m in Sources */,
+				8372E87013EAAE1900B6C63D /* BtTriangleMesh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
