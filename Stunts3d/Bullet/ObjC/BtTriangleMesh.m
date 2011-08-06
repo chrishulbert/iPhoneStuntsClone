@@ -12,38 +12,47 @@
 @implementation BtTriangleMesh
 
 - (void)dealloc {
+    delete trimesh;
     delete rigidBody;
     delete motionState;
     delete shape;
     [super dealloc];
 }
 
-- (id)initWithRadius:(float)radius atX:(float)x y:(float)y z:(float)z {
-    self = [self init];
+- (id)init {
+    self = [super init];
     if (self) {
-        btTriangleMesh* data = new btTriangleMesh();
-        btVector3 A(0.0f,0.0f,0.0f);
-        btVector3 B(1.0f,0.0f,0.0f);
-        btVector3 C(0.0f,0.0f,1.0f);
-        data->addTriangle(A,B,C,false); // false, don’t remove duplicate vertices
-        // true for using quantization; true for building the BVH
-        shape=new btBvhTriangleMeshShape(data,true,true);
-        
-        motionState =
-        new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(x,y,z)));
-        
-        btScalar mass = 1;
-        btVector3 inertia(0,0,0);
-        shape->calculateLocalInertia(mass, inertia);
-        
-        btRigidBody::btRigidBodyConstructionInfo rigidBodyCI(mass,motionState,shape,inertia);
-        rigidBody = new btRigidBody(rigidBodyCI);
+        trimesh = new btTriangleMesh();
     }
     return self;
 }
 
-+ (BtSphere*) sphereWithRadius:(float)radius atX:(float)x y:(float)y z:(float)z {
-    return [[[BtSphere alloc] initWithRadius:radius atX:x y:y z:z] autorelease];
+// btVector3 A(0.0f,0.0f,0.0f);
+- (void)addTri:(btPos)a b:(btPos)b c:(btPos)c {
+    trimesh->addTriangle(
+                         btVector3(a.x,a.y,a.z),
+                         btVector3(b.x,b.y,b.z),
+                         btVector3(c.x,c.y,c.z),
+                         false); // false, don’t remove duplicate vertices
+}
+
+- (void)doneAddingTriangles {
+    // true for using quantization; true for building the BVH
+    shape = new btBvhTriangleMeshShape(trimesh, true, true);
+    
+    // Make a non-transformed and non-rotated (identity) motion state / transform / quaternion
+    motionState = new btDefaultMotionState();
+    
+    btScalar mass = 0; // Setting the mass to zero makes this a non moving object
+    btVector3 inertia(0,0,0);
+    shape->calculateLocalInertia(mass, inertia);
+    
+    btRigidBody::btRigidBodyConstructionInfo rigidBodyCI(mass,motionState,shape,inertia);
+    rigidBody = new btRigidBody(rigidBodyCI);
+}
+
++ (BtTriangleMesh*) triangleMesh {
+    return [[[BtTriangleMesh alloc] init] autorelease];
 }
 
 @end
